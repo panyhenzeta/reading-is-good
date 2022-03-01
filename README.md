@@ -69,7 +69,7 @@
 - Build project and create projects docker image.
     - ```./mvnw clean install```
 - Build a docker image with desired tag
-    - ```docker build -f .\docker\Dockerfile -t readingisgood:{tag} .```
+    - ```docker build -f .\docker\Dockerfile -t readingisgood .```
 - Run docker image with desired port
     - ```docker run -p {port}:8080 readingisgood:{tag}```
 
