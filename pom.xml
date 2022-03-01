@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.getir</groupId>
-	<artifactId>readingisgoodMongo</artifactId>
+	<artifactId>readingisgood</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>readingisgood</name>
 	<description>Getir case study</description>
