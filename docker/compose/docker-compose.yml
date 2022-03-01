@@ -7,8 +7,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-        - MONGO_INITDB_ROOT_USERNAME=sample123
-        - MONGO_INITDB_ROOT_PASSWORD=sample123
+        - MONGO_INITDB_ROOT_USERNAME=getir
+        - MONGO_INITDB_ROOT_PASSWORD=getir
         - MONGO_INITDB_DATABASE=readingisgood
   mongo-express:
     image: mongo-express:0.54.0
@@ -16,10 +16,10 @@ services:
         - ME_CONFIG_MONGODB_SERVER=mongo
         - ME_CONFIG_MONGODB_PORT=27017
         - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
-        - ME_CONFIG_MONGODB_ADMINUSERNAME=sample123
-        - ME_CONFIG_MONGODB_ADMINPASSWORD=sample123
-        - ME_CONFIG_MONGODB_AUTH_USERNAME=sample123
-        - ME_CONFIG_MONGODB_AUTH_PASSWORD=sample123
+        - ME_CONFIG_MONGODB_ADMINUSERNAME=getir
+        - ME_CONFIG_MONGODB_ADMINPASSWORD=getir
+        - ME_CONFIG_MONGODB_AUTH_USERNAME=getir
+        - ME_CONFIG_MONGODB_AUTH_PASSWORD=getir
         - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
     depends_on:
         - mongo
