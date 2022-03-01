@@ -1,6 +1,6 @@
 ## Developer note:
-- This project developed with Java 11 and spring framework(spring boot v 2.6.3)
-- H2 database used for store data. save entities, persist request and response etc.
+- This project developed with Java 11 and spring framework(spring boot v 2.6.4)
+- Mongodb used for store data. save entities, persist request and response etc.
     - H2 database can be reached {project_url}/h2-console. Credentials for h2-console,
        ```
        - jdbcUrl: jdbc:h2:./data/demo
@@ -33,22 +33,17 @@
 ## Tech stack:
 
 * Java 11
-* H2 database
+* Mongodb
 * Docker
 * Swagger
 * Mockito
 
 ## Design
-
-![image](https://user-images.githubusercontent.com/9322357/155968084-43df853d-08cf-4ffc-aa16-100cb1685b4e.png)
-
 - Db Design
     - Customer has name, surname and email. Email field is unique for customers.
-    - Book has name and price.
-    - Book has one to one relation with BookStock. BookStock has also quantity for stock quantity information.
-    - CustomerOrder is table for order. CustomerOrder has ordered date, price, status. CustomerOrder has many to one relationship with Customer. It has many to many relationship with Book.
-    - OrderBook is junction table of CustomerOrder and Book. OrderBook gives the information of which book is ordered and how many of them ordered as a quantity in the order.
-
+    - Book has name, price and stock.
+    - CustomerOrder is table for order. CustomerOrder has ordered date, price, status, customer and book list. Book list keeps the book and quantity list of orders.
+    
 - System Design
     - The project is started with designing database.
     - Controllers and services and designed.
