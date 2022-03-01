@@ -65,7 +65,7 @@ public class OrderServiceTest {
     }
 
     private void setBook(){
-        Long stock = Double.valueOf(Math.random()*15).longValue();
+        Long stock = Double.valueOf(Math.random()*100).longValue();
         Double price = Double.valueOf(Math.random()*15);
 
         this.book = new Book();
