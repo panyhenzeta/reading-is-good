@@ -1,11 +1,12 @@
 ## Developer note:
 - This project developed with Java 11 and spring framework(spring boot v 2.6.4)
 - Mongodb used for store data. save entities, persist request and response etc.
-    - H2 database can be reached {project_url}/h2-console. Credentials for h2-console,
+    - Mongo express is used and runs in 8081 port.
+    - Mongodb credentials
        ```
-       - jdbcUrl: jdbc:h2:./data/demo
-       - username: sa
-       - password: 
+       - username: getir
+       - password: getir
+       - database: readingisgood
       ```
 - Rest APIs documented with swagger on [Swagger](http://localhost:8080/swagger-ui)
 - APIs serving on 8080 port.
