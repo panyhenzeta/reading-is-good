@@ -1,7 +1,7 @@
 ## Developer note:
 - This project developed with Java 11 and spring framework(spring boot v 2.6.4)
 - Mongodb used for store data. save entities, persist request and response etc.
-    - Mongo express is used and runs in 8081 port.
+    - Mongo express is used monitorizing data and runs in 8081 port.
     - Mongodb credentials
        ```
        - username: getir
@@ -70,7 +70,10 @@
     - ```./mvnw clean install```
 - Build a docker image with desired tag
     - ```docker build -f .\docker\Dockerfile -t readingisgood .```
-- Run docker image with desired port
-    - ```docker run -p {port}:8080 readingisgood:{tag}```
+- Run containers
+  - ```docker compose -f .\docker\compose\docker-compose.yml up -d```
+ - After executing this command all containers(application, mongodb, mongoexpress) will be up and running.
+ - To stop docker run command below
+   - ```docker-compose -f .\docker\compose\docker-compose.yml down```
 
 **zkaratatar**
